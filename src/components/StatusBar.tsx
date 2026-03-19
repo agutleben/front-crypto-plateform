@@ -6,12 +6,12 @@ export function StatusBar({ connected, lastUpdate }: Props) {
   return (
     <div className="flex items-center justify-between px-4 py-2 text-xs"
       style={{ borderBottom: '1px solid var(--border)', color: 'var(--text)' }}>
-      <span>Crypto Analytics Platform</span>
+      <span>Crypto Analytics Platform with Binance API</span>
       <div className="flex items-center gap-2">
         <span className="flex items-center">
           Refresh 5s
           <Tooltip
-            text="Data pushed via WebSocket every 5 seconds from BigQuery mart tables"
+            text="Data pushed via WebSocket every 5 seconds"
             position="bottom"
             width={220}
           />
