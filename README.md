@@ -12,7 +12,7 @@
 
 Key features:
 
-- **Live Top Movers** — ranked by absolute price change, refreshed every 15 seconds via WebSocket
+- **Live Top Movers** — ranked by absolute price change, refreshed every 5 seconds via WebSocket
 - **OHLCV Chart** — 1-hour candlestick data (VWAP, High, Low, Volume) for any selected symbol
 - **Volume Heatmap** — hour × day-of-week volume distribution
 - **Alert Feed** — symbols with price variation above configurable threshold
@@ -104,7 +104,7 @@ The `useWebSocket` hook maintains a persistent connection to the backend. On dis
 
 ```
 ws://localhost:8000/ws/metrics
-  └── push every 15s → { top_movers: [...], alerts: [...] }
+  └── push every 5s → { top_movers: [...], alerts: [...] }
 ```
 
 ---
