@@ -14,6 +14,7 @@ export function TopMovers({ data, onSelect, selected }: Props) {
       <table className="w-full text-sm mt-3">
         <thead>
           <tr style={{ color: 'var(--text)', borderBottom: '1px solid var(--border)' }}>
+            <th className="text-left pb-2">Symbol</th>
             <th className="text-right pb-2">
               VWAP
               <Tooltip text="Volume Weighted Average Price — average price weighted by trade volume over the last 5 minutes" />
