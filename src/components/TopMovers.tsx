@@ -1,4 +1,5 @@
 import type { TopMover } from '../types/index'
+import { Tooltip } from './Tooltip'
 
 interface Props {
   data: TopMover[]
@@ -13,10 +14,18 @@ export function TopMovers({ data, onSelect, selected }: Props) {
       <table className="w-full text-sm mt-3">
         <thead>
           <tr style={{ color: 'var(--text)', borderBottom: '1px solid var(--border)' }}>
-            <th className="text-left pb-2">Symbol</th>
-            <th className="text-right pb-2">VWAP</th>
-            <th className="text-right pb-2">Change %</th>
-            <th className="text-right pb-2">Trades</th>
+            <th className="text-right pb-2">
+              VWAP
+              <Tooltip text="Volume Weighted Average Price — average price weighted by trade volume over the last 5 minutes" />
+            </th>
+            <th className="text-right pb-2">
+              Change %
+              <Tooltip text="Price variation over the last 5 minutes: (close - open) / open × 100. Positive = bullish, negative = bearish." />
+            </th>
+            <th className="text-right pb-2">
+              Trades
+              <Tooltip text="Number of individual trades executed in the last 5-minute window" />
+            </th>
           </tr>
         </thead>
         <tbody>

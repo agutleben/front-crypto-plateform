@@ -1,5 +1,6 @@
 import type { Alert } from '../types/index'
 import { Bell } from 'lucide-react'
+import { Tooltip } from './Tooltip'
 
 interface Props {
   data: Alert[]
@@ -11,6 +12,11 @@ export function Alerts({ data }: Props) {
       <div className="flex items-center gap-2 mb-3">
         <Bell size={18} style={{ color: 'var(--accent)' }} />
         <h2 style={{ color: 'var(--text-h)' }}>Alerts</h2>
+        <Tooltip 
+          text="Triggered when |price_change_pct| > 0.5% over the last 5-minute window" 
+          position="right"
+          width={220}
+        />
         {data.length > 0 && (
           <span className="ml-auto text-xs px-2 py-1 rounded-full font-bold"
             style={{ background: 'var(--accent-bg)', color: 'var(--accent)' }}>
